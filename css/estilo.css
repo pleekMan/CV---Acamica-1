@@ -1,0 +1,264 @@
+:root{
+   --active-color:white;
+   --inactive-color:black;
+}
+
+
+* {
+   // PARA DEBUGGEAR AREAS DE ELEMENTOS
+   //box-shadow: 0 0 1px red;
+}
+
+
+div{
+   margin: 0px;
+}
+
+body{
+   background: var(--inactive-color);
+   color:var(--inactive-color);
+   //background-color: rgb(0, 181, 181);
+   margin:0px;
+   border: 0px;
+   padding: 0px;
+}
+
+p {
+   background-color:var(--active-color);
+   color: var(--active-color);
+
+   margin:0px;
+   border: 0px;
+   padding: 0px;
+}
+
+p:hover{
+   background-color:var(--inactive-color);
+   transition-duration: 1s;
+   transition-property: background-color;
+}
+
+
+h1:hover{
+   background-color:var(--active-color);
+}
+
+h6{
+   color: var(--active-color);
+   text-align: center;
+   margin: 0px;
+}
+
+ul{
+   background-color:var(--active-color);
+   color: var(--active-color);
+   clear: both;
+}
+
+ul:hover{
+   transform: rotate(20turn);
+   margin: 50px 0px 50px 0px;
+   transition: transform 5s;
+   transition-timing-function: ease-out;
+}
+
+li:hover{
+   color: var(--inactive-color);
+   //transform: rotate(10deg);
+}
+
+/*--------------------- NAV IZQUIERDA  --*/
+
+#izquierda{
+   float: left;
+   width:240px;
+   height: 200px;
+   //margin = 0px;
+   //border = 0px;
+   //padding: 0px;
+}
+
+#izquierda a{
+   color: var(--inactive-color);
+   background-color: var(--active-color);
+
+}
+
+.menuItem{
+   transform: rotate(-90deg) translateX(-209px);
+   height: 100%;
+}
+
+.menuItem h1{
+
+   font-size: 50px;
+   margin: 0px;
+   padding-right: 200%;
+   padding-left: 600px;
+   background-color: var(--active-color);
+   color: var(--inactive-color);
+   text-align: right;
+   transition: padding-left 10s;
+
+}
+
+.menuItem h1:hover{
+   padding-left: 0px;
+   transition: padding-left 10s;
+}
+
+.menuItem div{
+   margin: -10px
+}
+
+#mensajito{
+   font-size: 14px;
+   position: absolute;
+   top: 0px;
+   left: 20px;
+   background-color: var(--inactive-color)
+   color: var(--active-color);
+   margin-top: 432px;
+}
+#mensajito:hover{
+   background-color: var(--active-color);
+   color: var(--inactive-color);
+}
+/*--------------------- CUERPO PRINCIPAL  --*/
+
+/*-------- DATA  --*/
+
+#cuerpo{
+   float: left;
+   width:70%;
+   margin = 0px;
+   border = 0px;
+   padding: 0px;
+}
+
+#cuerpo h3{
+   color: rgb(255, 255, 255);
+   text-align: center;
+   margin-top: 10px;
+   margin-bottom: 0px;
+}
+
+.dataValue{
+   float: left;
+   background-color: var(--inactive-color);
+   color: var(--active-color);
+}
+
+.dataSlider{
+   background-color: var(--active-color);
+   color: var(--active-color);
+
+   transform: translateX(0px);
+   transition: transform 2s;
+}
+
+.dataSlider:hover{
+   transform: translateX(180px);
+   transition: transform 0.2s;
+}
+
+/*-------- FORMACION  --*/
+
+.formacionEn p{
+   float:left;
+   background-color: var(--inactive-color);
+   color: var(--active-color);
+}
+
+
+.lugar{
+   background-color:var(--active-color);
+   color: var(--active-color);
+}
+
+.lugar:hover{
+   background-color: var(--active-color);
+   color: var(--inactive-color);
+   transform-origin: 10% 50%;
+   //transition-timing-function: ease-in-out;
+   transform: rotate(45deg);
+   //transition: transform 2s;
+   -webkit-animation: colgando 5s infinite ease-in-out;
+}
+
+@-webkit-keyframes colgando{
+  0% {transform: rotate(0deg)}
+  25%{transform: rotate(140deg)}
+  50%{transform: rotate(50deg)}
+  75%{transform: rotate(140deg)}
+  100%{transform: rotate(0deg)}
+}
+
+
+#stickItInYourFace{
+   margin-top: 1px;
+   transition: transform 1s, font-size 1s;
+}
+#stickItInYourFace:hover{
+   transform: translateY(-800px) rotate(45deg);
+   text-align: center;
+   font-size: 300px;
+
+   transition: transform 3s, font-size 3s;
+}
+
+/*--------------------- CONTACTO  --*/
+
+#contact{
+
+   clear:both;
+
+   text-align: center;
+   color: var(--active-color);
+   width: 180px;
+   padding-top: 20px;
+   padding-bottom: 30px;
+   margin-left: 45%;
+   margin-right: 0px;
+   border-style: dashed;
+   border-top: 0px;
+   border-bottom: 0px;
+   border-width: 1px;
+}
+
+#contact:hover{
+   padding-top: 1000px;
+   margin-left: 0%;
+   margin-right: 0px;
+   transition-timing-function: linear;
+   //transition: padding-top 8s, margin-left 8s;
+   -webkit-animation: jueguito 15s normal linear;
+
+}
+
+#hiddenData{
+   color: var(--inactive-color);
+}
+
+#hiddenData:hover{
+   color: var(--active-color);
+   transition: color 0.5s;
+}
+
+@-webkit-keyframes jueguito{
+  0% {padding-top: 20px; margin-left: 45%}
+  25% {padding-top: 500px; margin-left: 20%}
+  75% {padding-top: 850px; margin-left: 50%}
+  100% {padding-top: 1000px; margin-left: 0%}
+
+
+
+}
+
+.slider{
+   position: relative;
+}
+
+.slider li{
+   overflow: hidden;
+}
